@@ -13,21 +13,21 @@ Controllable Image Generation  Using ControlNet or Stable Diffusion, implement a
 3. File Structure
 The organization of this repository and the purpose of each file are outlined below:
 
-*├── training_data/                # Original / baseline training data directory
-*├── training_data_HED/            # Dataset preprocessed with HED edge detection
-*├── training_data_morph/          # Dataset preprocessed with Morphological operations
-*│
-*├── 01_prepare_dataset_Canny.py   # Preprocessing: Generates Canny edge sketches
-*├── 01_prepare_dataset_HED.py     # Preprocessing: Generates HED edge sketches
-*├── 01_prepare_dataset_morph.py   # Preprocessing: Generates Morphological sketches
-*│
-*├── 03_face_canny_p1_lora_inference_evaluate.py  # Inference & evaluation for the Canny model
-*├── 03_face_hed_p1_lora_inference_evaluate.py    # Inference & evaluation for the HED model
-*├── 03_face_morph_p1_lora_inference_evaluate.py  # Inference & evaluation for the Morph model
-*│
-*├── 04_real_test.py               # Final evaluation and generation script
-*├── LICENSE                       # Project license (MIT License)
-*└── README.md                     # This documentation file
+├── training_data/                # Original / baseline training data directory<br>
+├── training_data_HED/            # Dataset preprocessed with HED edge detection<br>
+├── training_data_morph/          # Dataset preprocessed with Morphological operations<br>
+│<br>
+├── 01_prepare_dataset_Canny.py   # Preprocessing: Generates Canny edge sketches<br>
+├── 01_prepare_dataset_HED.py     # Preprocessing: Generates HED edge sketches<br>
+├── 01_prepare_dataset_morph.py   # Preprocessing: Generates Morphological sketches<br>
+│<br>
+├── 03_face_canny_p1_lora_inference_evaluate.py  # Inference & evaluation for the Canny model<br>
+├── 03_face_hed_p1_lora_inference_evaluate.py    # Inference & evaluation for the HED model<br>
+├── 03_face_morph_p1_lora_inference_evaluate.py  # Inference & evaluation for the Morph model<br>
+│<br>
+├── 04_real_test.py               # Final evaluation and generation script<br>
+├── LICENSE                       # Project license (MIT License)<br>
+└── README.md                     # This documentation file<br>
 
 4. Installation & Usage
 
