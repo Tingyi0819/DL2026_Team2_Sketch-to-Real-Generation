@@ -43,7 +43,6 @@ LoRA is applied exclusively to the UNet's attention layers (`to_q`, `to_k`, `to_
 | **HED** | Holistically-nested Edge Detection; produces softer, hierarchical edges | `sd-controlnet-scribble` |
 | **Morphological Gradient** | Dilation minus erosion; captures structural boundaries with filled regions | `sd-controlnet-scribble` |
 
-All three methods share the same LoRA training configuration (rank 4, LR 5e-5, 500 steps, batch size 1 with gradient accumulation 2).
 
 ---
 
@@ -60,20 +59,14 @@ All three methods share the same LoRA training configuration (rank 4, LR 5e-5, 5
 ├── 04_real_test.py
 │
 ├── training_data/                  # Canny dataset + LoRA training notebook
-│   ├── images/                     # Ground truth face photos (512×512)
-│   ├── conditioning_images/        # Canny edge maps (512×512)
 │   ├── train.jsonl                 # Metadata linking images to captions
 │   └── train_lora.ipynb            # LoRA training script (Canny)
 │
 ├── training_data_HED/              # HED dataset + LoRA training notebook
-│   ├── images/
-│   ├── conditioning_images/
 │   ├── train.jsonl
 │   └── train_lora.ipynb            # LoRA training script (HED)
 │
 ├── training_data_morph/            # Morphological Gradient dataset + LoRA training notebook
-│   ├── images/
-│   ├── conditioning_images/
 │   ├── train.jsonl
 │   └── train_lora.ipynb            # LoRA training script (Morph)
 │
@@ -129,7 +122,6 @@ These scripts run inference on the first 50 test images and compute six evaluati
 
 Outputs:
 - `eval_6metrics.csv` — per-image metric scores for both models.
-- `evaluation_grid_6metrics.png` — a visual grid (input sketch / ground truth / baseline output / LoRA output) for the first 10 test samples with metric annotations.
 - FID scores computed via `pytorch-fid` over all 50 generated images.
 
 **`04_real_test.py`**
@@ -141,6 +133,7 @@ Runs inference and evaluation on real user-provided sketches stored in the `real
 ## Usage
 
 All scripts are designed to run on **Google Colab** with a GPU runtime. Google Drive is used for data persistence.
+Please ensure all paths are correct.
 
 ### Step 1 — Prepare the Dataset
 
@@ -193,7 +186,7 @@ MyDrive/++DL/04_project_face/eval_6metrics/
 
 ### Step 4 — Real Sketch Test
 
-Place your sketch images in the `real_test/` folder, then run:
+Place your sketch images in the `real_test/` folder, or upload images, then run:
 
 ```bash
 python 04_real_test.py
