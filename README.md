@@ -36,3 +36,20 @@ Ensure you have the required Python packages installed:
 ```bash
 pip install -r requirements.txt
 #[torch, diffusers, opencv-python]
+
+
+How to Run
+Step 1: Data Preprocessing
+Generate the sketch datasets by running the corresponding preprocessing script:
+python 01_prepare_dataset_Canny.py
+# Or python 01_prepare_dataset_HED.py
+# Or python 01_prepare_dataset_morph.py
+
+Step 2: Inference & Evaluation
+Run the evaluation scripts to perform inference using the fine-tuned LoRA models:
+python 03_face_canny_p1_lora_inference_evaluate.py
+
+Step 3: Final Generation Test
+Execute the main testing script to view the final sketch-to-real generation results:
+python 04_real_test.py
+
