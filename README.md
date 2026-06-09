@@ -36,7 +36,7 @@ Ensure you have the required Python packages installed:
 ```bash
 pip install -r requirements.txt
 #[torch, diffusers, opencv-python]
-
+```
 
 How to Run
 Step 1: Data Preprocessing
