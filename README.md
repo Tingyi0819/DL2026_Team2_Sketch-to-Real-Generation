@@ -239,6 +239,6 @@ Key library versions used during development:
 ## Acknowledgements
 
 - Face dataset: [FFHQ-256](https://huggingface.co/datasets/merkol/ffhq-256)
-- Base diffusion model: [runwayml/stable-diffusion-v1-5](https://huggingface.co/runwayml/stable-diffusion-v1-5)
+- Base diffusion model: [runwayml/stable-diffusion-v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)
 - ControlNet weights: [lllyasviel/sd-controlnet-scribble](https://huggingface.co/lllyasviel/sd-controlnet-scribble)
 - LoRA implementation: [HuggingFace PEFT](https://github.com/huggingface/peft)
